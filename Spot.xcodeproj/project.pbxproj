@@ -217,12 +217,12 @@
 				TargetAttributes = {
 					4F9DE3D31E365F49009013B4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					4F9DE3DC1E365F49009013B4 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -233,6 +233,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4F9DE3CA1E365F49009013B4;
 			productRefGroup = 4F9DE3D51E365F49009013B4 /* Products */;
@@ -293,7 +294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\nreleaseConfig=\"Release\"\nif [ \"$releaseConfig\" != \"${CONFIGURATION}\" ]; then\nif which swiftformat >/dev/null; then\nSCAN_PATH=\"${SRCROOT}\"\nswiftformat \"${SCAN_PATH}\" `< ../Scripts/swiftformat-options.txt`\nelse\necho \"swiftformat not installed, install from homebrew\"\nfi\nfi\n";
+			shellScript = "#!/bin/bash\nreleaseConfig=\"Release\"\nif [ \"$releaseConfig\" != \"${CONFIGURATION}\" ]; then\nif which swiftformat >/dev/null; then\nSCAN_PATH=\"${SRCROOT}\"\nswiftformat \"${SCAN_PATH}\" `< ../Scripts/swiftformat-options.txt` --swiftversion 5.0\nelse\necho \"swiftformat not installed, install from homebrew\"\nfi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -421,7 +422,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Calabash;
 		};
@@ -439,7 +440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.SpotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Calabash;
 		};
@@ -583,7 +584,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -607,7 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.SPOT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -625,7 +626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.SpotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -643,7 +644,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.davidhardiman.SpotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
